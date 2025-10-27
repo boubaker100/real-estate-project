@@ -50,3 +50,20 @@ Add a real-time chat between users.
 Implement property ratings and reviews.
 
 Enhance the mobile version for a fully responsive experience.
+
+📸 Screenshots
+
+🏠 Home Page
+![Home Page](./screenshots/public/HomePage.png)
+
+🏢 Apparments for rent or sell
+![Apparment](./screenshots/public/Apparment.png)
+
+🏢 Apparments Details Click
+![Apparment details](./screenshots/public/DetailApparmentClick.png)
+
+🔐 Login / Register Page
+![Login](./screenshots/public/Login.png)
+
+📊 Dashboard 
+![Dashboard](./screenshots/public/Dashboard.png)
