@@ -1,8 +1,8 @@
 "use client";
 import { useEffect } from "react";
-import { MapContainer, TileLayer, Marker, Popup, useMap } from "react-leaflet";
-import "leaflet/dist/leaflet.css";
+import { Marker, Popup, useMap } from "react-leaflet";
 import L from "leaflet";
+import LeafletMap from "./LeafletMap";
 
 function ChangeView({ center, zoom }: { center: L.LatLngExpression; zoom: number }) {
   const map = useMap();
@@ -15,11 +15,6 @@ function ChangeView({ center, zoom }: { center: L.LatLngExpression; zoom: number
   return null;
 }
 
-interface MapComponentProps {
-  flats: any[];
-  center: L.LatLngExpression;
-}
-
 const customIcon = new L.Icon({
   iconUrl: "https://unpkg.com/leaflet@1.9.3/dist/images/marker-icon.png",
   iconSize: [25, 41],
@@ -29,29 +24,21 @@ const customIcon = new L.Icon({
   shadowSize: [41, 41],
 });
 
+interface MapComponentProps {
+  flats: any[];
+  center: L.LatLngExpression;
+}
+
 export default function MapComponent({ flats, center }: MapComponentProps) {
   return (
     <div className="w-full h-96 mt-10">
-      {/* ✅ إضافة key=center لإجبار إعادة التهيئة عند تغير المركز */}
-      <MapContainer
-        key={Array.isArray(center) ? center.join(",") : String(center)}
-        center={center}
-        zoom={13}
-        scrollWheelZoom={false}
-        className="h-full w-full rounded-lg shadow-lg"
-      >
+      <LeafletMap>
         <ChangeView center={center} zoom={13} />
-        <TileLayer
-          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-        />
 
-        {/* ماركر المدينة المحددة */}
         <Marker position={center} icon={customIcon}>
           <Popup>Selected City</Popup>
         </Marker>
 
-        {/* ماركرات الشقق */}
         {flats
           .filter((flat) => flat.coordinates)
           .map((flat, index) => (
@@ -59,13 +46,13 @@ export default function MapComponent({ flats, center }: MapComponentProps) {
               <Popup>
                 <div>
                   <p><strong>{flat.title}</strong></p>
-                  <p>السعر: {flat.price} دج</p>
-                  <p>المساحة: {flat.metrics} م²</p>
+                  <p>Price: {flat.price} dzd</p>
+                  <p>Area: {flat.metrics} m</p>
                 </div>
               </Popup>
             </Marker>
           ))}
-      </MapContainer>
+      </LeafletMap>
     </div>
   );
 }
