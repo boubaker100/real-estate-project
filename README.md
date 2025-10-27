@@ -54,16 +54,16 @@ Enhance the mobile version for a fully responsive experience.
 📸 Screenshots
 
 🏠 Home Page
-![Home Page](./screenshots/public/HomePage.png)
+![Home Page](./public/screenshots/HomePage.png)
 
 🏢 Apparments for rent or sell
-![Apparment](./screenshots/public/Apparment.png)
+![Apparment](./public/screenshots/Apparment.png)
 
 🏢 Apparments Details Click
-![Apparment details](./screenshots/public/DetailApparmentClick.png)
+![Apparment details](./public/screenshots/DetailApparmentClick.png)
 
 🔐 Login / Register Page
-![Login](./screenshots/public/Login.png)
+![Login](./public/screenshots/Login.png)
 
 📊 Dashboard 
-![Dashboard](./screenshots/public/Dashboard.png)
+![Dashboard](./public/screenshots/Dashboard.png)
