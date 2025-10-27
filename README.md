@@ -57,7 +57,7 @@ Enhance the mobile version for a fully responsive experience.
 ![Home Page](./public/screenshots/HomePage.png)
 
 🏢 Apparments for rent or sell
-![Apparment](./public/screenshots/Apparment.png)
+![Apparment](./public/screenshots/Appartment.png)
 
 🏢 Apparments Details Click
 ![Apparment details](./public/screenshots/DetailApparmentClick.png)
