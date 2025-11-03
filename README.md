@@ -67,3 +67,14 @@ Enhance the mobile version for a fully responsive experience.
 
 📊 Dashboard 
 ![Dashboard](./public/screenshots/Dashboard.png)
+
+
+
+ 👨‍💻 Developer
+ Boudina Boubaker
+ 
+💼 LinkedIn : https://www.linkedin.com/in/boubaker-boudina-874253147/
+
+🌐 Portfolio : https://my-portfolio-three-theta-30.vercel.app/
+
+📧 Email: boubkerboudinadev@email.com
