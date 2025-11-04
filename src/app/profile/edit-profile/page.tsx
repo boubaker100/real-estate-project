@@ -22,7 +22,6 @@ export default function Profile() {
 
   const onSubmit = (data: ProfileFormData) => {
     console.log("Form Data:", data)
-    // هنا تضع كود تحديث بيانات البروفايل على الخادم
   }
 
   const { user } = useAuthStore()
